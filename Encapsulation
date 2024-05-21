@@ -1,0 +1,49 @@
+#Encapsulation
+#public
+class hello:
+    def hi(self):
+        print('hi guys myself Rohan')
+
+class bye:
+    def greet(self):
+        print('welcome home guys')
+        a_obj = hello()
+        a_obj.hi()
+
+b_obj = bye()
+b_obj.greet()
+print('----------------------------------------------')
+
+#private
+class A:
+    def __hi(self):
+        print('hello guys')
+
+    def bye(self):
+        print('bye guys')
+        a_obj = A()
+        a_obj.__hi()
+
+class B(A):
+    def greet(self):
+        print('good morning guys')
+
+a_obj = A()
+a_obj.bye()
+b_obj = B()
+b_obj.greet()
+print('----------------------------------------------')
+
+#protected
+class A:
+    def _hi(self):
+        print('hello guys')
+
+class B(A):
+    def greet(self):
+        print('good morning guys')
+        a_obj = A()
+        a_obj._hi()
+
+b_obj = B()
+b_obj.greet()
